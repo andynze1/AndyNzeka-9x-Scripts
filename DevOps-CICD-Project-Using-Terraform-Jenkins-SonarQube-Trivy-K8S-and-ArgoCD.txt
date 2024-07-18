@@ -248,7 +248,7 @@ Refer---https://argo-cd.readthedocs.io/en/stable/cli_installation/
     $ kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 
 6 ) Wait about 2 minutes for the LoadBalancer creation
-    $ kubectl get svc -n argocd
+    $ kubectl get svc -n argocd   //copy dns name of LB and browse on explora 
 
 7 ) Get pasword and decode it and login to ArgoCD on Browser. Go to user info and change the password
     $ kubectl get secret argocd-initial-admin-secret -n argocd -o yaml

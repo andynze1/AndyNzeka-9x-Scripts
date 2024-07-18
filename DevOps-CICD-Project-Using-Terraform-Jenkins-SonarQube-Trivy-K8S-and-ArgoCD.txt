@@ -123,11 +123,15 @@ cd /tmp
 sudo mv /tmp/eksctl /bin
 eksctl version
 
+Create Role in IAM = eksctl_role (AdministratorAccess) and attach to the instance
 4--Setup Kubernetes using eksctl
-eksctl create cluster --name virtualtechbox-cluster \
---region ap-south-1 \
---node-type t2.small \
---nodes 3 \
+#eksctl create cluster --name virtualtechbox-cluster \
+#--region ap-south-1 \
+#--node-type t2.small \
+#--nodes 3 \
+
+# Creation of EKS cluster Command with eksctl from MAC
+  eksctl create cluster  --name vtech-eks-cluster --version 1.23 --region us-east-1  --nodegroup-name Linux-nodes  --nodes 2 --nodes-min 1 --nodes-max 4  --node-type t2.micro  --node-volume-size 8 --ssh-access  --ssh-public-key aws-key1 --managed
 
 5-- Verify Cluster with below command
 $ kubectl get nodes

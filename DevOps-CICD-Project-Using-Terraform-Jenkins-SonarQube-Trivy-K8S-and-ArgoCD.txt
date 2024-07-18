@@ -214,7 +214,7 @@ kubectl get svc -n prometheus        //check the services file (svc) of the Prom
 
 3 ) let’s expose Prometheus to the external world
 
-kubectl edit svc stable-kube-prometheus-sta-prometheus -n prometheus                 //change it from Cluster IP to LoadBalancer.change port & targetport to 9090, save and close
+kubectl edit svc stable-kube-prometheus-sta-prometheus -n prometheus                 //change it from Cluster IP to LoadBalancer.change the ports & targetport to 9090, save and close
 
 kubectl get svc -n prometheus    //copy dns name of LB and browse with 9090
 

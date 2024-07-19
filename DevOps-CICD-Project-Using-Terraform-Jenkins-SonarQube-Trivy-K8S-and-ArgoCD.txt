@@ -185,7 +185,13 @@ Create Role in IAM = eksctl_role (AdministratorAccess) and attach to the instanc
 #--nodes 3 \
 
 # Creation of EKS cluster Command with eksctl from MAC
-$  eksctl create cluster  --name vtech-eks-cluster --version 1.23 --region us-east-1  --nodegroup-name Linux-nodes  --nodes 3 --nodes-min 2 --nodes-max 4  --node-type t2.small --node-volume-size 8 --ssh-access  --ssh-public-key aws-key1 --managed
+$  eksctl create cluster  --name vtech-eks-cluster \
+--version 1.23 --region us-east-1  \
+--nodegroup-name Linux-nodes \
+--nodes 3 --nodes-min 2 \
+--nodes-max 4  --node-type t2.small \
+--node-volume-size 8 --ssh-access  \
+--ssh-public-key aws-key1 --managed
 
 5-- Verify Cluster with below command
 $ kubectl get nodes
